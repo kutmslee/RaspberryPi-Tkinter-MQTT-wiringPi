@@ -32,14 +32,14 @@ def ButtonClick3():
     client.on_disconnect = on_disconnect
     client.on_subscribe = on_subscribe
     client.on_message = on_message
-    client.connect('mqtt-dashboard.com', 1883)
+    client.connect('mqtt brocker URL', 1883)
     client.loop_start()
     client.subscribe('testtopic/1', 1)
     #client.loop_forever()
     
 def ButtonClick4():
     client.loop_stop()
-    client.disconnect('mqtt-dashboard.com', 1883)
+    client.disconnect('mqtt brocker URL', 1883)
     
 def on_connect(client, userdata, flags, rc):
     if rc==0:
